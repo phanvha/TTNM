@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MoonLight</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_1">Taste of Xmas - Chạm vị Giáng sinh</string>
+    <string name="text_2">Năm nay tại MoonLightCoffee, “vị” Giáng sinh mà bạn yêu thích, mong chờ từ trước đến nay vẫn sẽ...</string>
+</resources>
