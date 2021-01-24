@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -22,6 +23,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.utt.moonlight.HomeActivity;
 import com.utt.moonlight.R;
 
 /**
@@ -43,6 +45,7 @@ public class HomeFragment extends Fragment  {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    private OrderFragment fragment;
 
 
     public HomeFragment() {
@@ -120,6 +123,21 @@ public class HomeFragment extends Fragment  {
 //
         
         return rootView;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        ImageView imgOrderBtn = (ImageView) view.findViewById(R.id.imgOrderBtn);
+
+        imgOrderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragment = new OrderFragment();
+
+            }
+        });
     }
 
     // TODO: Rename method, update argument and hook method into UI event

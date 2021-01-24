@@ -152,6 +152,7 @@
                     android:orientation="vertical"
                     android:layout_height="wrap_content">
                     <ImageView
+                        android:id="@+id/imgOrderBtn"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:background="@drawable/order_clipart"/>

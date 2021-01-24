@@ -2,29 +2,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="60dp"
     tools:context="com.utt.fragments.fragment_tab.CommonFragment">
 
     <TextView
-        android:id="@+id/txtM"
+        android:id="@+id/txtLikeDrink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Món ăn yêu thích"
+        android:text="Đồ uống yêu thích"
         android:textSize="16sp"
         android:textColor="@color/black"
         android:layout_margin="10dp"/>
+<!--    <ProgressBar-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/txtLikeDrink"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        style="@style/SpinKitView.Circle"-->
+<!--        android:id="@+id/processbar_common_drink"/>-->
 
 
-    <GridView
-        android:layout_below="@+id/txtM"
-        android:id="@+id/gridView"
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/txtLikeDrink"
+        android:id="@+id/recyclerViewCommonDrink"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:numColumns="2"
-        android:verticalSpacing="11dp"
-        android:background="@android:color/transparent"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:horizontalSpacing="2dp"/>
+        app:spanCount="12"
+        app:stackFromEnd="true"
+        android:layout_margin="10dp"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtLikeFood"-->
+<!--        android:layout_below="@+id/recyclerViewCommonDrink"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Món ăn yêu thích"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:layout_margin="10dp"/>-->
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:layout_below="@+id/txtLikeFood"-->
+<!--        android:id="@+id/recyclerViewCommonFood"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:spanCount="12"-->
+<!--        app:stackFromEnd="true"-->
+<!--        android:layout_margin="10dp"/>-->
 
 </RelativeLayout>
