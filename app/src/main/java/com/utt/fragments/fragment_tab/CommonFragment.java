@@ -31,6 +31,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.github.ybq.android.spinkit.SpinKitView;
 import com.google.android.gms.maps.model.LatLng;
 import com.utt.API_Interface.Product_interface;
 import com.utt.API_clients.API_clients;
@@ -78,6 +79,7 @@ public class CommonFragment extends Fragment implements GridCommonAdapter.OnShar
     RecyclerView recyclerView;
     List<DataProducts> dataProductsList = new ArrayList<>();
     Dialog dialog;
+    SpinKitView spinKitView;
 
     private OnFragmentInteractionListener mListener;
     private ProgressDialog progressDialog;
@@ -133,11 +135,11 @@ public class CommonFragment extends Fragment implements GridCommonAdapter.OnShar
         super.onViewCreated(view, savedInstanceState);
 
 
-        gridView = view.findViewById(R.id.gridView);
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewCommonDrink);
+        spinKitView = view.findViewById(R.id.spin_kit_comm);
         getDataProducts();
         //new readData().execute();
-        statusData();
+        //statusData();
 //        CommonAdapter commonAdapter = new CommonAdapter();
 //        gridView.setAdapter(gridCommonAdapter);
 //        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -173,7 +175,9 @@ public class CommonFragment extends Fragment implements GridCommonAdapter.OnShar
     @Override
     public void ShareDesClicked(boolean position) {
         if (position){
-            dialog.dismiss();
+            spinKitView.setVisibility(View.GONE);
+        }else{
+            spinKitView.setVisibility(View.VISIBLE);
         }
 
     }

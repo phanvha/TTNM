@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="60dp"
     tools:context="com.utt.fragments.fragment_tab.FoodFragment">
 
@@ -15,16 +16,22 @@
         android:layout_margin="10dp"/>
 
 
-    <GridView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_below="@+id/txtM"
-        android:id="@+id/gridView"
+        android:id="@+id/recyclerViewCoDrink"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:numColumns="2"
-        android:verticalSpacing="11dp"
+        app:spanCount="12"
+        app:stackFromEnd="true"
+        android:paddingBottom="50dp"
+        android:layout_margin="10dp"/>
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_centerInParent="true"
         android:background="@android:color/transparent"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:horizontalSpacing="2dp"/>
-
+        app:SpinKit_Color="@color/color_basic_1"
+        app:SpinKit_Style="Circle"/>
 </RelativeLayout>
