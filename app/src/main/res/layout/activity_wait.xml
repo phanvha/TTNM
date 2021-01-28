@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mContent"
+    tools:context=".WaitActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/logoAnim"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        app:lottie_autoPlay="false"
+        android:layout_centerHorizontal="true"
+        app:lottie_rawRes="@raw/coffee_love"
+        android:layout_above="@+id/txtAppNameW"/>
+
+    <TextView
+        android:id="@+id/txtAppNameW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="MoonLight Coffee"
+        android:textColor="@color/color_basic_1"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/btn_sign_in"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_login_btn_basic"
+        android:shadowRadius="5"
+        android:textColor="@color/white"
+        android:text="Đăng nhập"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_above="@+id/btn_sign_up"/>
+
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/bg_login_btn_white"
+        android:textColor="@color/color_basic_1"
+
+        android:text="Đăng ký"
+        android:textSize="16sp"
+        android:textAllCaps="false"/>
+
+
+
+</RelativeLayout>
