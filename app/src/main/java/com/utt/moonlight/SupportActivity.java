@@ -1,4 +1,4 @@
-package com.example.moonlightapplication.moonlight;
+package com.utt.moonlight;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -1,4 +1,4 @@
-package com.example.moonlightapplication.moonlight;
+package com.utt.moonlight;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.moonlightapplication.R;
 
 public class LoginPageActivity extends AppCompatActivity {
     private TextView txtsupport, txtsetting;

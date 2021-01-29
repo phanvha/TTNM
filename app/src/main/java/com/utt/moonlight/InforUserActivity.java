@@ -1,4 +1,4 @@
-package com.example.moonlightapplication.moonlight;
+package com.utt.moonlight;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,8 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.moonlightapplication.R;
-import com.example.moonlightapplication.fragments.AccountFragment;
+
 
 public class InforUserActivity extends AppCompatActivity {
     private ImageView imgBackToMenu;

@@ -1,10 +1,9 @@
-package com.example.moonlightapplication.moonlight;
+package com.utt.moonlight;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.moonlightapplication.R;
 
 public class CartHistoryActivity extends AppCompatActivity {
 
