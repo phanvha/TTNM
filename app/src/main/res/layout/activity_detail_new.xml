@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".moonlight.DetailNewActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/toolbarInfoSupport"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_nav"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:weightSum="10">
+            <ImageView
+                android:id="@+id/imageBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Taste of Xmax - Chạm vị giáng sinh"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:textSize="16dp"
+                android:textColor="@color/black"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/share"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"/>
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="-230dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/coffeetime"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="-210dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Taste of Xmas - Chạm vị Giáng sinh"
+                    android:textColor="@color/black"
+                    android:textSize="19dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="26 tháng 11, 2020"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Những ngày cuối năm thật khác, Giáng sinh cũng
+vì thế mà khác hơn sau 1 năm đặc biệt. Thế nhưng
+tại The Moon Light Coffee năm nay, “vị” Giáng sinh
+mà bạn yêu thích, mong chờ từ trước đến nay vẫn
+sẽ vẹn nguyên và đong đầy - tất cả đều sống động
+qua từng khoảnh khắc, từng ngóc ngách quanh
+chiếc bàn cà phê ấm cúng..."
+                    android:textColor="@color/black"
+                    android:textSize="15dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Và ở cả 2 hương vị thượng hạng mà Bariste
+MoonLight đã ấp ủ dành riêng cho mùa ấm áp,
+được gói ghém cẩn thận trong mẫu ly Giáng sinh
+phiên bản giới hạn:"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- Merry Choco (Choco lúa mạch): hương vị để bạn
+chiều chuộng bản thân - mang vị ngọt hoàn hảo
+được cân chỉnh hợp lý từ sô cô la và lúa mạch
+thơm lừng, không quá gắt"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- Merry Coffee (Cà phê lúa mạch): vị cà phê đắng
+nhẹ quen thuộc, nhưng lại thơm và đặc biệt hơn
+khi có lúa mạch hòa quyện. Hương vị tỉnh táo cho
+những ai yêu vị cà phê không quá đắng, thơm
+béo và ngọt ngào"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/coffeetime"
+                    android:layout_marginTop="-210dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 hương vị, 4 phiên bản nóng - lạnh và tất cả “vị”
+Giáng sinh mà bạn mong đợi, đều sẽ có mặt tại
+MoonLight vào ngày 26/11. Hãy cùng người mình
+thương chạm và tận hưởng “vị” Giáng sinh cùng
+MoonLight nhé!"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:layout_marginTop="-220dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

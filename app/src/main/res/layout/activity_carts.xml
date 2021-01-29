@@ -1,45 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CartsActivity">
-
+    tools:context=".moonlight.CartsActivity">
     <RelativeLayout
         android:id="@+id/toolbarCarts"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/bg_nav"
         android:layout_alignParentTop="true"
-        android:orientation="horizontal"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
+        android:orientation="horizontal"
         android:weightSum="10">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:text="Giỏ hàng của bạn"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:maxLines="1"
             android:maxLength="25"
-            android:ellipsize="end"/>
+            android:ellipsize="end"
+            android:layout_centerInParent="true"/>
         <ImageView
-            android:id="@+id/imgBackToHome"
+            android:id="@+id/imgBacktohome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_arrow_back"
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="20dp"/>
-
     </RelativeLayout>
-
     <ScrollView
-        android:layout_below="@id/toolbarCarts"
+        android:layout_below="@+id/toolbarCarts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="none">
@@ -99,7 +96,6 @@
                         android:orientation="vertical"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"/>
-
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
@@ -108,7 +104,6 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:background="@color/white">
-
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -130,7 +125,6 @@
                         android:ellipsize="end"
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/black"/>
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -148,7 +142,6 @@
                             android:layout_marginBottom="5dp"
                             android:textColor="@color/black"/>
                     </LinearLayout>
-
                 </LinearLayout>
             </LinearLayout>
             <TextView
@@ -159,42 +152,73 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:text="Thời gian nhận hàng"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white">
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_time"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-                    <ImageView
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp">
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:src="@drawable/ic_time"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                        android:text="Hẹn giờ"
+                        android:layout_marginBottom="5dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginLeft="20dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Hẹn giờ"
-                            android:layout_marginBottom="5dp" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="15 phút"
-                            android:textColor="@color/black"/>
-                    </LinearLayout>
-
+                        android:text="15 phút"
+                        android:textColor="@color/black"/>
                 </LinearLayout>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/coupon"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mã ưu đãi"
+                        android:textColor="@color/black"/>
+                    <ImageView
+                        android:id="@+id/imgcouple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/arrow_forward"
+                        android:layout_marginLeft="180dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -296,10 +320,8 @@
                             android:textStyle="bold"
                             android:textColor="@color/black"/>
                     </RelativeLayout>
-
                 </LinearLayout>
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -320,12 +342,9 @@
                         android:textSize="16sp"
                         android:textColor="@color/white"
                         android:layout_marginBottom="5dp" />
-
                 </LinearLayout>
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
-
 
 </RelativeLayout>

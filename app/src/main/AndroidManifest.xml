@@ -32,6 +32,18 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".WaitActivity"></activity>
+        <activity android:name=".moonlight.MyCoupleActivity"></activity>
+        <activity android:name=".moonlight.NotifyActivity" />
+        <activity android:name=".moonlight.DetailNew1Activity" />
+        <activity android:name=".moonlight.DetailNewActivity" />
+        <activity android:name=".moonlight.LoginPageActivity" />
+        <activity android:name=".moonlight.MemberInformationActivity" />
+        <activity android:name=".moonlight.AccountConnectActivity" />
+        <activity android:name=".moonlight.SettingActivity" />
+        <activity android:name=".moonlight.CartHistoryActivity" />
+        <activity android:name=".moonlight.SupportActivity" />
+        <activity android:name=".moonlight.InforUserActivity" />
+        <activity android:name=".moonlight.InforStoreActivity" />
         <activity android:name=".RegisterActivity" />
         <activity
             android:name=".SplashActivity"
