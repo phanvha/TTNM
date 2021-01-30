@@ -30,6 +30,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Đồ ăn"/>
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabsItem4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:icon="@drawable/ic_search"/>
     </com.google.android.material.tabs.TabLayout>
 
     <FrameLayout

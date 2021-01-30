@@ -1,6 +1,7 @@
 package com.utt.fragments;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -8,11 +9,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -23,8 +28,13 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.gson.Gson;
+import com.squareup.picasso.Picasso;
+import com.utt.config.Config;
+import com.utt.model.DataUser;
 import com.utt.moonlight.HomeActivity;
 import com.utt.moonlight.R;
+import com.utt.utils.SharedPreferencesObject;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -44,8 +54,11 @@ public class HomeFragment extends Fragment  {
     private String mParam1;
     private String mParam2;
 
+
     private OnFragmentInteractionListener mListener;
     private OrderFragment fragment;
+    private TextView txtNameHome;
+    private ImageView imgAvatarHome;
 
 
     public HomeFragment() {
@@ -91,6 +104,20 @@ public class HomeFragment extends Fragment  {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_home, container, false);
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getContext());
+        SharedPreferences mPrefs = getActivity().getPreferences(Context.MODE_PRIVATE);
+        String user_token = mPrefs.getString("user_token", "");
+
+        if (acct!=null){
+            getProfileGGAccount();
+        }
+        if (!user_token.equals("")){
+            getProfileUserFromApi(user_token);
+        }
+
+//        Bundle bundle = this.getArguments();
+//        String a = bundle.getString("key");
+//        Log.e("eyyy", a+"");
 
 //        mMapView = (MapView) rootView.findViewById(R.id.mapView);
 //        mMapView.onCreate(savedInstanceState);
@@ -125,11 +152,24 @@ public class HomeFragment extends Fragment  {
         return rootView;
     }
 
+    private void getProfileUserFromApi(String user_token) {
+        Log.e("userToken", user_token+"");
+    }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        imgAvatarHome = (ImageView) view.findViewById(R.id.imgAvatarHome);
+        txtNameHome    = (TextView) view.findViewById(R.id.txtNameHome);
         ImageView imgOrderBtn = (ImageView) view.findViewById(R.id.imgOrderBtn);
+
+
+//            DataUser dataUser = SharedPreferencesObject.getUserObjectPreferences(getActivity());
+//            //String url = Config.API_URL+dataUser.getUrl();
+//            txtNameHome.setText(dataUser.getName());
+//            //Picasso.with(getContext()).load(url).into(imgAvatarHome);
+
 
         imgOrderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,6 +178,50 @@ public class HomeFragment extends Fragment  {
 
             }
         });
+    }
+
+
+//    private void checkAccount(){
+//        if (CheckGoogleAccountStatus.getcheckDataAccount(this) == true){
+//            getProfileGGAccount();
+//        }else{
+//            btnLogout.setVisibility(View.GONE);
+//            btnLogin.setVisibility(View.VISIBLE);
+//            //Log.d("Login", "null");
+//        }
+//    }
+
+    //gte google profile
+    private void getProfileGGAccount(){
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getContext());
+        if (acct != null) {
+            String personName = acct.getDisplayName();
+            String personGivenName = acct.getGivenName();
+            String personFamilyName = acct.getFamilyName();
+            String personEmail = acct.getEmail();
+            String personId = acct.getId();
+            Uri personPhoto = acct.getPhotoUrl();
+            String idToken =acct.getIdToken();
+            String serverAuthCode = acct.getServerAuthCode();
+//            Log.d("get_data_from_gg",
+//                    "DisplayName: "+personName+
+//                            "GivenName: "+ personGivenName+
+//                            "FamilyName: "+personFamilyName+
+//                            "Email: "+personEmail+
+//                            "Id: "+personId+
+//                            "PhotoUrl: "+personPhoto.toString()+
+//                            "IdToken: "+idToken+
+//                            "ServerAuthCode: "+ serverAuthCode);
+
+            //set layout
+            txtNameHome.setText(personName);
+            Picasso.with(getContext()).load(String.valueOf(personPhoto)).into(imgAvatarHome);
+//            tvNav_Email.setText(personEmail);
+//            Glide.with(this).load(String.valueOf(personPhoto)).into(image_Avatar);
+//            btnLogout.setVisibility(View.VISIBLE);
+//            btnLogin.setVisibility(View.GONE);
+            //saveAccount(personEmail);
+        }
     }
 
     // TODO: Rename method, update argument and hook method into UI event

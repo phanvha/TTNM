@@ -10,6 +10,7 @@ import android.app.ActionBar;
 import android.app.Dialog;
 import android.app.FragmentManager;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -58,13 +59,20 @@ public class HomeActivity extends AppCompatActivity implements HomeFragment.OnFr
 
         initLayout();
         // Begin the transaction
+        Intent intent = getIntent();
+        int key = intent.getIntExtra("key",0);
+        Log.e("keyy", ""+key);
         ft = getSupportFragmentManager().beginTransaction();
+        Bundle bundle=new Bundle();
+        bundle.putInt("key",key);
+
         // Replace the contents of the container with the new fragment
         ft.replace(R.id.fragment_container, new HomeFragment());
         // or ft.add(R.id.your_placeholder, new FooFragment());
         // Complete the changes added above
         ft.commit();
         fragment = new HomeFragment();
+        fragment.setArguments(bundle);
 
 //        final Handler handler = new Handler();
 //        final Runnable r = new Runnable() {

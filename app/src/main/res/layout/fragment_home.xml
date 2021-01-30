@@ -29,6 +29,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:id="@+id/imgAvatarHome"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:gravity="center_vertical"
@@ -45,6 +46,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
+                    android:id="@+id/txtNameHome"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
