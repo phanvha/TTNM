@@ -21,7 +21,6 @@ public class DetailNew1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(DetailNew1Activity.this, HomeActivity.class);
                 startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
             }
         });
     }
