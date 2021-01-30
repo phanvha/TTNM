@@ -1,2 +1,2 @@
-# TTNM
-# Team Project human and machine interaction
+# TTNM - PVH - CVH - HNH
+# Team Project human computer interaction
