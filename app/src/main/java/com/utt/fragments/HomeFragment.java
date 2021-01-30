@@ -1,6 +1,7 @@
 package com.utt.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
@@ -32,6 +33,7 @@ import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 import com.utt.config.Config;
 import com.utt.model.DataUser;
+import com.utt.moonlight.CartsActivity;
 import com.utt.moonlight.HomeActivity;
 import com.utt.moonlight.R;
 import com.utt.utils.SharedPreferencesObject;
@@ -58,7 +60,7 @@ public class HomeFragment extends Fragment  {
     private OnFragmentInteractionListener mListener;
     private OrderFragment fragment;
     private TextView txtNameHome;
-    private ImageView imgAvatarHome;
+    private ImageView imgAvatarHome, imgCart;
 
 
     public HomeFragment() {
@@ -161,8 +163,16 @@ public class HomeFragment extends Fragment  {
         super.onViewCreated(view, savedInstanceState);
 
         imgAvatarHome = (ImageView) view.findViewById(R.id.imgAvatarHome);
+        imgCart = (ImageView) view.findViewById(R.id.imgCart);
         txtNameHome    = (TextView) view.findViewById(R.id.txtNameHome);
         ImageView imgOrderBtn = (ImageView) view.findViewById(R.id.imgOrderBtn);
+        imgCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), CartsActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 //            DataUser dataUser = SharedPreferencesObject.getUserObjectPreferences(getActivity());
