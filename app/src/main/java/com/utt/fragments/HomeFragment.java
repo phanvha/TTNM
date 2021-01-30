@@ -165,7 +165,7 @@ public class HomeFragment extends Fragment  {
         imgAvatarHome = (ImageView) view.findViewById(R.id.imgAvatarHome);
         imgCart = (ImageView) view.findViewById(R.id.imgCart);
         txtNameHome    = (TextView) view.findViewById(R.id.txtNameHome);
-        ImageView imgOrderBtn = (ImageView) view.findViewById(R.id.imgOrderBtn);
+//        ImageView imgOrderBtn = (ImageView) view.findViewById(R.id.imgOrderBtn);
         imgCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -181,13 +181,13 @@ public class HomeFragment extends Fragment  {
 //            //Picasso.with(getContext()).load(url).into(imgAvatarHome);
 
 
-        imgOrderBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                fragment = new OrderFragment();
-
-            }
-        });
+//        imgOrderBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                fragment = new OrderFragment();
+//
+//            }
+//        });
     }
 
 
