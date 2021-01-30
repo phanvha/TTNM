@@ -1,9 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.utt.fragments.HomeFragment">
+    tools:context="com.example.moonlightapplication.fragments.HomeFragment"
+    android:id="@+id/fragment_home">
 
     <LinearLayout
         android:id="@+id/toolbarHome"
@@ -15,13 +17,11 @@
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
         android:weightSum="10">
-
         <LinearLayout
             android:layout_weight="3"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
             <LinearLayout
                 android:background="@drawable/bg_avatar"
                 android:layout_width="wrap_content"
@@ -34,7 +34,6 @@
                     android:layout_height="30dp"
                     android:gravity="center_vertical"
                     android:background="@drawable/avt"/>
-
             </LinearLayout>
             <LinearLayout
                 android:background="@drawable/bg_avatar"
@@ -74,19 +73,13 @@
                         android:layout_height="16dp"
                         android:background="@drawable/ic_night"
                         android:layout_gravity="center_vertical"/>
-
-
                 </LinearLayout>
-
-
             </LinearLayout>
-
         </LinearLayout>
         <RelativeLayout
             android:layout_weight="7"
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
-
             <ImageView
                 android:id="@+id/imgCart"
                 android:layout_width="24dp"
@@ -137,6 +130,7 @@
                     android:orientation="vertical"
                     android:layout_height="wrap_content">
                     <ImageView
+                        android:id="@+id/points"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:background="@drawable/up_point"/>
@@ -154,7 +148,6 @@
                     android:orientation="vertical"
                     android:layout_height="wrap_content">
                     <ImageView
-                        android:id="@+id/imgOrderBtn"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:background="@drawable/order_clipart"/>
@@ -172,6 +165,7 @@
                     android:orientation="vertical"
                     android:layout_height="wrap_content">
                     <ImageView
+                        android:id="@+id/imgCoupon"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:background="@drawable/coupon_clipart"/>
@@ -189,6 +183,7 @@
                     android:orientation="vertical"
                     android:layout_height="wrap_content">
                     <ImageView
+                        android:id="@+id/point"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:background="@drawable/reward_clipart"/>
@@ -255,6 +250,7 @@
                                     android:text="@string/text_2"/>
 
                                 <Button
+                                    android:id="@+id/btnDetail1"
                                     android:layout_width="50dp"
                                     android:layout_height="20dp"
                                     android:text="Chi tiết"
@@ -291,7 +287,7 @@
                                     android:ellipsize="end"
                                     android:textSize="12sp"
                                     android:textColor="@color/black"
-                                    android:text="@string/text_1"/>
+                                    android:text="@string/text_3"/>
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -301,7 +297,7 @@
                                     android:maxLines="3"
                                     android:ellipsize="end"
                                     android:textSize="10sp"
-                                    android:text="@string/text_2"/>
+                                    android:text="@string/text_4"/>
 
                                 <Button
                                     android:layout_width="50dp"
@@ -329,7 +325,7 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="100dp"
-                                    android:background="@drawable/cold_brew"/>
+                                    android:background="@drawable/sale_up"/>
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -340,7 +336,7 @@
                                     android:ellipsize="end"
                                     android:textSize="12sp"
                                     android:textColor="@color/black"
-                                    android:text="@string/text_1"/>
+                                    android:text="@string/text_3"/>
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -350,7 +346,7 @@
                                     android:maxLines="3"
                                     android:ellipsize="end"
                                     android:textSize="10sp"
-                                    android:text="@string/text_2"/>
+                                    android:text="@string/text_4"/>
 
                                 <Button
                                     android:layout_width="50dp"
@@ -429,6 +425,7 @@
                                     android:textSize="10sp" />
 
                                 <Button
+                                    android:id="@+id/btnDetail2"
                                     android:layout_width="50dp"
                                     android:layout_height="20dp"
                                     android:text="Chi tiết"
@@ -514,7 +511,7 @@
                                     android:ellipsize="end"
                                     android:textSize="12sp"
                                     android:textColor="@color/black"
-                                    android:text="@string/text_1"/>
+                                    android:text="[Tp. HCM]Thông báo nhỏ tháng 11"/>
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -523,7 +520,7 @@
                                     android:maxLines="3"
                                     android:ellipsize="end"
                                     android:textSize="10sp"
-                                    android:text="@string/text_2"/>
+                                    android:text="Từ ngày 15/11, tất cả các chi nhánh của MoonLight Coffee xin phép chỉ phục vụ tối đa 30 khách tại chỗ. Các bạn nhớ mang khẩu trang, giữ khoảng cách..."/>
 
                                 <Button
                                     android:layout_width="50dp"
@@ -719,5 +716,3 @@
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
-
-

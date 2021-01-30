@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".moonlight.NotifyActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:weightSum="10">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_nav"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:weightSum="10">
+            <ImageView
+                android:id="@+id/imgback"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_baseline_clear"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Thông báo"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginLeft="100dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/notify"
+                android:layout_gravity="center"
+                android:layout_marginTop="170dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bạn đang không có thông báo nào"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:layout_marginTop="60dp" />
+            <Button
+                android:id="@+id/btncontrol"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_accept"
+                android:layout_gravity="center"
+                android:text="Quay lại trang chính"
+                android:textColor="@color/white"
+                android:layout_marginTop="40dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
